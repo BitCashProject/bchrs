@@ -1,0 +1,22 @@
+{
+  "name": "node",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.node",
+  "scripts": {
+    "build": "cargo-cp-artifact -nc index.node -- cargo build --message-format=json-render-diagnostics",
+    "run:example": "node ./example/index.js",
+    "dev:example": "nodemon --quiet --watch index.node --watch example --exec \"pnpm run:example\"",
+    "dev:rust": "nodemon --quiet --watch src --ext \"rs\" --exec \"pnpm build\"",
+    "dev": "concurrently \"pnpm dev:rust\" \"pnpm dev:example\"",
+    "test": "cargo test"
+  },
+  "devDependencies": {
+    "cargo-cp-artifact": "^0.1",
+    "concurrently": "^7.6.0",
+    "nodemon": "^2.0.20"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
