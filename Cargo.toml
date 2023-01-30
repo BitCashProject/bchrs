@@ -1,0 +1,14 @@
+[package]
+name = "bchrs"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.68"
+bitcoin = "0.29.2"
+bitcoin-cash = "0.2.3"
+rand = "0.8.5"
+thiserror = "1.0.38"
+tiny-bip39 = "1.0.0"

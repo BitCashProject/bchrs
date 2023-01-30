@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "dev": "cargo watch -x \"test\" -c"
+  }
+}
